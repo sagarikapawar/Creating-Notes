@@ -1,0 +1,19 @@
+.note-detail-elements{
+    font-size: 12px;
+    font-family: "Roboto";
+    text-decoration: none;
+    color: #ffffff;
+    padding: 3px;
+    margin: 4px;
+}
+.notes-container{
+    background-color:#00000033;
+    height: 30vh;
+    width: 17vw;
+    border-radius: 10px;
+    color: white;
+    margin-left: 6px;
+    padding: 2px;
+    
+
+}

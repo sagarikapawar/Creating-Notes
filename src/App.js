@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import NoteDetail from './pages/NoteDetail'
+import EditNotes from './pages/EditNotes'
+
+import NoteForm from './pages/NoteForm'
+import FloatBtn from './pages/FloatBtn'
+
+import {useState,useEffect} from 'react'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App=()=>{
+  const [notes, setNotes]=useState(JSON.parse(localStorage.getItem('notes')) || [])
+
+  useEffect(()=>{
+    localStorage.setItem('notes',JSON.stringify(notes))
+
+  },[notes])
+  
+
+return (
+  <BrowserRouter>
+  
+  <Routes>
+    <Route  path='/' element={<HomePage notes={notes}/>}/>
+    <Route path='/notedetail' element={<NoteDetail  />}/>
+    <Route  path='/noteform' element={<NoteForm setNotes={setNotes}/>}/>
+    <Route  path='/editnotes/:id' element={<EditNotes notes={notes} setNotes={setNotes}/>}/>
+    <Route  path='/floatingbutton' element={<FloatBtn/>}/>
+    
+  </Routes>
+  </BrowserRouter>
+)
 }
+  
+
 
 export default App;

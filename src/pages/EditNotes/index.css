@@ -1,0 +1,54 @@
+
+@media screen and (max-width:676px){
+    .edit-app-container{
+        background-color: #00000033;
+        height: 100vh;
+        width: 100vw;
+    }
+
+}
+.edit-app-container{
+    background-color: #00000033;
+    height: 100vh;
+    width: 100vw;
+}
+.edit-app{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.button1{
+    background-color: blue;
+    color: #ffffff;
+    border: none;
+    display: flex;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    padding: 6px;
+    font-family: "Roboto";
+    font-size: 16px;
+    padding: 12px;
+    margin-right: 5px;
+    border-radius: 6px;
+
+
+}
+.button2{
+    background-color: blue;
+    color: #ffffff;
+    border: none;
+    display: flex;
+    height: 30px;
+    width: fit-content;
+    text-align: center;
+    padding: 6px;
+    font-family: "Roboto";
+    font-size: 16px;
+    padding: 12px;
+    background-color: red;
+    border-radius: 6px;
+
+}
+
